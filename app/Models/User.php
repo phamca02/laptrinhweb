@@ -41,7 +41,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be cast.
+     * The attributes that should be cast.ss
      *
      * @var array<string, string>dđgit 
      */

@@ -62,12 +62,20 @@ class CrudUserController extends Controller
         ]);
 
         $data = $request->all();
+        if ($request->hasFile('avatar')) {
+            // Lưu vào thư mục 'public/avatars' và lấy đường dẫn
+            $avatarPath = $request->file('avatar')->store('avatars', 'public');
+        } else {
+            $avatarPath = null; // Hoặc gán giá trị mặc định nếu không có ảnh
+        }
+        
         $check = User::create([
             'name' => $data['name'],
             'tkgit' => $data['tkgit'],
             'sothich' => $data['sothich'],
             'email' => $data['email'],
-            'password' => Hash::make($data['password'])
+            'password' => Hash::make($data['password']),
+            'avatar' => $avatarPath, // Thêm đường dẫn avatar
         ]);
 
         return redirect("login");

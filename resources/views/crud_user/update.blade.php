@@ -22,11 +22,19 @@
 
 
                                 <div class="form-group mb-3">
-                                    <input type="text" placeholder="Name" id="phone" class="form-control" name="phone"
-                                           value="{{ $user->phone }}"
+                                    <input type="text" placeholder="tkgit" id="tkgit" class="form-control" name="tkgit"
+                                           value="{{ $user->tkgit }}"
+                                           required autofocus>
+                                    @if ($errors->has('tkgit'))
+                                        <span class="text-danger">{{ $errors->first('tkgit') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="sothich" id="sothich" class="form-control" name="sothich"
+                                           value="{{ $user->sothich }}"
                                            required autofocus>
                                     @if ($errors->has('phone'))
-                                        <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                        <span class="text-danger">{{ $errors->first('sothich') }}</span>
                                     @endif
                                 </div>
 
@@ -44,6 +52,13 @@
                                            name="password" required>
                                     @if ($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="file" id="avatar" class="form-control" name="avatar" accept="image/*"
+                                    name="password" required>
+                                    @if ($errors->has('avatar'))
+                                        <span class="text-danger">{{ $errors->first('avatar') }}</span>
                                     @endif
                                 </div>
 

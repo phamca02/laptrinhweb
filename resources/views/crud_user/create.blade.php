@@ -44,11 +44,18 @@
                                         <span class="text-danger">{{ $errors->first('email') }}</span>
                                     @endif
                                 </div>
+
                                 <div class="form-group mb-3">
                                     <input type="password" placeholder="Password" id="password" class="form-control"
                                            name="password" required>
                                     @if ($errors->has('password'))
                                         <span class="text-danger">{{ $errors->first('password') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="file" id="avatar" class="form-control" name="avatar" accept="image/*">
+                                    @if ($errors->has('avatar'))
+                                        <span class="text-danger">{{ $errors->first('avatar') }}</span>
                                     @endif
                                 </div>
                                 <div class="d-grid mx-auto">

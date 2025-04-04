@@ -9,9 +9,10 @@
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
-                            <th>phone</th>
-                            <th>address</th>
+                            <th>tkgit</th>
+                            <th>sothich</th>
                             <th>Email</th>
+                            <th>Avatar</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -20,9 +21,10 @@
                             <tr>
                                 <th>{{ $user->id }}</th>
                                 <th>{{ $user->name }}</th>
-                                <th>{{ $user->phone }}</th>
-                                <th>{{ $user->address }}</th>
+                                <th>{{ $user->tkgit }}</th>
+                                <th>{{ $user->sothich }}</th>
                                 <th>{{ $user->email }}</th>
+                                <th>{{ $user->avatar}}</th>
                                 <th>
                                     <a href="{{ route('user.readUser', ['id' => $user->id]) }}">View</a> |
                                     <a href="{{ route('user.updateUser', ['id' => $user->id]) }}">Edit</a> |

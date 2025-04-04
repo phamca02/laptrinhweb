@@ -19,7 +19,22 @@
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     @endif
                                 </div>
-
+                                <!-- -- -->
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="ten git hub" id="tkgit" class="form-control" name="tkgit"
+                                           required autofocus>
+                                    @if ($errors->has('tkgit'))
+                                        <span class="text-danger">{{ $errors->first('tkgit') }}</span>
+                                    @endif
+                                </div>
+                                <div class="form-group mb-3">
+                                    <input type="text" placeholder="sothich" id="sothich" class="form-control" name="sothich"
+                                           required autofocus>
+                                    @if ($errors->has('sothich'))
+                                        <span class="text-danger">{{ $errors->first('sothich') }}</span>
+                                    @endif
+                                </div>
+                                 <!-- -- -->
                                 
                                 
                                 <div class="form-group mb-3">

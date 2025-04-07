@@ -8,7 +8,7 @@
                     <div class="card">
                         <h3 class="card-header text-center">Create User</h3>
                         <div class="card-body">
-                            <form action="{{ route('user.postUser') }}" method="POST">
+                            <form action="{{ route('user.postUser') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
 
 

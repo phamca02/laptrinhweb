@@ -129,6 +129,12 @@ class CrudUserController extends Controller
        $user->name = $input['name'];
        $user->email = $input['email'];
        $user->password = $input['password'];
+        // Xử lý ảnh đại diện
+    if ($request->hasFile('avatar')) {
+        // Lưu vào thư mục 'public/avatars' và lấy đường dẫn
+        $avatarPath = $request->file('avatar')->store('avatars', 'public');
+        $user->avatar = $avatarPath; // Cập nhật đường dẫn avatar
+    }
        $user->save();
 
         return redirect("list")->withSuccess('You have signed-in');
